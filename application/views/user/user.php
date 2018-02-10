@@ -22,8 +22,9 @@
                     <td><?php echo $user->email ?></td>
                     <td><?php echo $user->age ?></td>
                     <td>
-                        <a href="#" class="btn btn-warning">แก้ไข</a>
-                        <a href="#" class="btn btn-danger">ลบ</a>
+                        <a href="/user/edit/<?php echo $user->user_id ?>" class="btn btn-warning"><i class="fa fa-search"></i>แก้ไข</a>
+                        <a onclick="javascript: return confirm('ถ้าจะลบ จะเพิ่มหาพ่องงง ?')" href="/user/delete/<?php echo $user->user_id ?>" class="btn btn-danger"><i class="fa fa-times"></i> ลบ</a>
+                        <a href="/user/show/<?php echo $user->user_id ?>" class="btn btn-info"><i class="fa fa-search"></i> แสดง</a>
                     </td>
                 </tr>
                 
