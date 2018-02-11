@@ -31,4 +31,26 @@
 
         <button type="button" class="btn btn-link">Link</button>
         <hr>
-        
+        <div class="row">
+           <div class="col-8"></div>
+           <div class="col-4">
+               <div class="card">
+                   <div class="card-header">
+                       เข้าสู่ระบบ
+                   </div>
+                   <div class="card-body">
+                   <p>สวัสดี, บุคคลทั่วไป</p>
+                       <form action="/auth/login" method="post">
+                           <div class="form-group">
+                               <input type="text" name="username" class="form-control" placeholder="username">
+                           </div>
+                           <div class="form-group">
+                               <input type="password" name="password" class="form-control" placeholder="password">
+                           </div>
+                           <p><a href="#"><i class="fa fa-user"></i> สมัครสมาชิก</a></p>
+                           <button type="submit" class="btn btn-primary">บันทึก</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>

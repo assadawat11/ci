@@ -7,6 +7,7 @@
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>ชื่อผู้ใช้</th>
                     <th>ชื่อ - สกุล</th>
                     <th>อีเมล์</th>
                     <th>อายุ</th>
@@ -17,7 +18,9 @@
             <?php foreach ($users->result() as $user) {
     ?>
                 <tr>
+                   
                     <td><?php echo $user->user_id ?></td>
+                    <td><?php echo $user->username ?></td>
                     <td><?php echo $user->fullname ?></td>
                     <td><?php echo $user->email ?></td>
                     <td><?php echo $user->age ?></td>

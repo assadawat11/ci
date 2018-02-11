@@ -28,12 +28,18 @@ class User extends CI_Controller
         $this->load->view('user/show', $data);
         $this->load->view('layout/footer');
     }
+    public function profile()
+    {
+        echo 'Your login';
+    }
+
     public function addUser()
     {
         $this->load->view('layout/header');
-        $this->load->view('user/addUser');
+        $this->load->view('user/add_user');
         $this->load->view('layout/footer');
     }
+
     public function edit($userID)
     {
         $user = $this->user_model->getuserBy($userID);
