@@ -6,6 +6,7 @@ class User extends CI_Controller
     {
            parent::__construct();
            $this->load->model('user_model');
+           $this->load->model('user_type_model');
     }
     public function index()
     {
@@ -35,11 +36,14 @@ class User extends CI_Controller
 
     public function addUser()
     {
+        $user_types = $this->user_type_model->getUserType();
+        $data = [
+            'user_types' => $user_types
+        ];
         $this->load->view('layout/header');
-        $this->load->view('user/add_user');
+        $this->load->view('user/add_user', $data);
         $this->load->view('layout/footer');
     }
-
     public function edit($userID)
     {
         $user = $this->user_model->getuserBy($userID);

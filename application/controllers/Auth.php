@@ -11,12 +11,28 @@ class Auth extends CI_Controller{
         $password = $this->input->post('password');
         $result = $this->user_model->checkLogin($username, $password);
         if($result->num_rows() > 0){
+            $user = $result->row();
+           $data = [
+               'user_id' => $user->user_id,
+               'username' => $user->username,
+               'fullname' => $user->fullname,
+               'user_type_id' => $user->user_type_id,
+               'email' => $user->email,
+               'age' => $user->age
+           ];
+           $this->session->set_userdata($data);
             //login
-            redirect('/user/profile');
+            redirect('/');
         }else{
-            //fell
+            //feal
             redirect('/');
         }
+    }
+
+    public function logOut()
+    {
+        $this->session->sess_destroy();
+        redirect('/');
     }
  
 }

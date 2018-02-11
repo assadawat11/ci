@@ -1,13 +1,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://placeholdit.co//i/555x150" alt="First slide">
+                    <img class="d-block w-100" src="http://www.travel.seasonubon.com/wp-content/uploads/2016/09/poogrodueng-555x150.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://placeholdit.co//i/555x150" alt="Second slide">
+                    <img class="d-block w-100" src="http://www.travel.seasonubon.com/wp-content/uploads/2016/09/tadton-555x150.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://placeholdit.co//i/555x150" alt="Third slide">
+                    <img class="d-block w-100" src="http://www.travel.seasonubon.com/wp-content/uploads/2016/09/toong3-1-555x150.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -39,17 +39,28 @@
                        เข้าสู่ระบบ
                    </div>
                    <div class="card-body">
-                   <p>สวัสดี, บุคคลทั่วไป</p>
+                   <?php
+                       if ($this->session->has_userdata('user_id')) {
+                           ?>
+                           <p>สวัสดี, <?php echo $this->session->userdata('fullname') ?></p>
+                           <p><a href="/auth/logout">ออกจากระบบ</a></p>
+                           <?php
+                       } else {
+                           ?>
+                       <p>สวัสดี, บุคคลทั่วไป</p>
                        <form action="/auth/login" method="post">
                            <div class="form-group">
-                               <input type="text" name="username" class="form-control" placeholder="username">
+                               <input type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้">
                            </div>
                            <div class="form-group">
-                               <input type="password" name="password" class="form-control" placeholder="password">
+                               <input type="password" name="password" class="form-control" placeholder="รหัสผ่าน">
                            </div>
-                           <p><a href="#"><i class="fa fa-user"></i> สมัครสมาชิก</a></p>
-                           <button type="submit" class="btn btn-primary">บันทึก</button>
+                           <p><a href="#"> สมัครสมาชิก</a></p>
+                           <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
                        </form>
+                      <?php
+                       }
+                   ?>
                    </div>
                </div>
            </div>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2018 at 10:06 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Feb 10, 2018 at 10:35 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,7 +43,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `fullname`, `email`, `age`, `created_at`, `updated_at`) VALUES
 (1, 'Bundit Nuntates', 'silkyland@gmail.com', 30, '2018-02-04 00:00:00', '2018-02-04 00:00:00'),
-(2, 'Manob Sannaka', 'manob@gmail.com', 25, '2018-02-04 00:00:00', '2018-02-04 00:00:00');
+(2, 'Manob Sannaka', 'manob@gmail.com', 25, '2018-02-04 00:00:00', '2018-02-04 00:00:00'),
+(4, 'todsob dotcom', 'todsob@cmru.ac.th', 12, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'สวัสดี ความถูกต้อง', 'sawasdee@gmail.com', 25, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,7 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_types`
