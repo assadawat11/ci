@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'us-cdbr-iron-east-05.cleardb.net',
 	'username' => 'ba4cbf2276e445',
 	'password' => '5a791f6c',
-	'database' => 'heroku_1024c70d90f0e26?reconnect=true',
+	'database' => 'heroku_1024c70d90f0e26',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
